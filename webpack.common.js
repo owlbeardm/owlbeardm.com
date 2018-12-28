@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
@@ -13,6 +13,15 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[hash].js',
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        common: {
+          name: 'common'
+        }
+      }
+    }
   },
   module: {
     rules: [{
@@ -30,10 +39,10 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: "css-loader"
-        })
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader"
+        ]
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
@@ -46,10 +55,6 @@ module.exports = {
         use: [
           'file-loader'
         ]
-      },
-      {
-        test: /\.properties$/,
-        use: ['properties-loader']
       }
     ]
   },
@@ -74,7 +79,9 @@ module.exports = {
         windows: false
       }
     }),
-    new ExtractTextPlugin('[name].[contenthash].css'),
+    new MiniCssExtractPlugin({
+      filename: '[name].[hash].css'
+    }),
     new webpack.HashedModuleIdsPlugin(),
     new CopyWebpackPlugin(
       [{
