@@ -1,5 +1,7 @@
 #!/bin/bash
 
+git tag -a v$1 -m "release version $1"
+git push origin --tags
 yarn build
 git checkout gh-pages
 git pull
