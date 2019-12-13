@@ -1,5 +1,5 @@
 'use strict';
-import './src/css/material-dashboard.css';
+import './src/css/styles.1.0.2.ef0599e0b4ae2fdc662b.css';
 import './src/css/app.css';
 import './src/components/components.module.js';
 // import './src/services/services.module.js';
