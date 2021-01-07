@@ -1,0 +1,24 @@
+.critical {
+    margin: 10px;
+}
+
+.table-primary, .table-primary>td, .table-primary>th {
+    background-color: #ca945c;
+    border-color: #ca945c;
+}
+
+/* .table-warning, .table-warning>td, .table-warning>th {
+    background-color: #ef971c;
+    border-color: #ef971c;
+}
+
+.table-danger, .table-danger>td, .table-danger>th {
+    background-color: #f44336;
+    border-color: #f44336;
+} */
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 2px 8px;
+    vertical-align: middle;
+    border-color: #ddd;
+}

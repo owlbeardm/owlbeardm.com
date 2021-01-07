@@ -1,13 +1,20 @@
 "use strict";
 
 import './wfrpcritical.css';
+const criticals = require('./wfrpcritical.json');
 
 function WfrpcriticalController($log) {
   $log.debug('WfrpcriticalController create');
   const ctrl = this;
 
-  ctrl.$onInit = function() {
+  ctrl.criticals = criticals;
+
+  ctrl.$onInit = function () {
     $log.debug('WfrpcriticalController init ');
+  }
+
+  ctrl.placeChanged = function () {
+    console.log("changed");
   }
 
 }
