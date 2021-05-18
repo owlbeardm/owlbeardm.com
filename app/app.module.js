@@ -44,6 +44,12 @@ initiativeApp.config([
           component: 'wfrpcritical',
         });
 
+        $stateProvider.state({
+          name: 'pathfinder2ecritical',
+          url: '/pathfinder2ecritical',
+          component: 'pathfinder2ecritical',
+        });
+
         $urlRouterProvider.otherwise('/');
         $locationProvider.html5Mode(true);
   },
