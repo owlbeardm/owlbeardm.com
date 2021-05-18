@@ -496,21 +496,19 @@
             </div>
           </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-auto">
             <span>Wounds count: #{{$ctrl.wCount}}; To wound roll: #{{$ctrl.wRoll}}; Wound result:
               #{{$ctrl.wResult}}</span>
           </div>
-        </div>
+        </div> -->
         <div class="row">
           <div class="col-auto">
-            <ul>
-              <li>{{$ctrl.weapon}}</li>
-              <li>{{$ctrl.place}}</li>
+            <ol>
               <li ng-repeat="critical in $ctrl.criticals[$ctrl.weapon][$ctrl.place]">
-                <span class="critical">{{$ctrl.criticals[$ctrl.weapon][$ctrl.place][$ctrl.wResult]}}</span>
+                <span class="critical">{{critical}}</span>
               </li>
-              <ul>
+              <ol>
           </div>
         </div>
       </div>

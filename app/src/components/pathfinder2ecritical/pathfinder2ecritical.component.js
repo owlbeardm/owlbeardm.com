@@ -20,17 +20,19 @@ function Pathfinder2eCriticalController($log) {
   ctrl.wCount = 1;
   ctrl.wRoll = 1;
   ctrl.wResult = 1;
+  
+  ctrl.wCount = function(c) {
+    ctrl.wCount = c;
+  }
+  ctrl.wRoll = function(r) {
+    ctrl.wRoll = r;
+  }
+  ctrl.wResult = function(r) {
+    ctrl.wResult = r;
+  }
 }
 
-ctrl.wCount = function(c) {
-  ctrl.wCount = c;
-}
-ctrl.wRoll = function(r) {
-  ctrl.wRoll = r;
-}
-ctrl.wResult = function(r) {
-  ctrl.wResult = r;
-}
+
 
 const Pathfinder2eCriticalComponent = {
   template: require('./pathfinder2ecritical.html'),
