@@ -2,8 +2,8 @@
   <div class="col-xl-8 col-centered">
     <div class="card">
       <div class="card-header card-header-primary">
-        <h4 class="card-title">Critical Hits for WFRP2E</h4>
-        <p class="card-category">WARHAMMER FANTASY RPG Critical Hits Rolls by Josef Tham, v2.0 from
+        <h4 class="card-title">Pathfinder 2E critical hits</h4>
+        <p class="card-category">Based on WARHAMMER FANTASY RPG Critical Hits Rolls by Josef Tham, v2.0 from
           <a href="http://www.windsofchaos.com/">
             www.windsofchaos.com
           </a>
@@ -17,46 +17,50 @@
                 <thead class="table-primary text-light">
                   <tr>
                     <th>#</th>
-                    <th><a href="#" ng-class="{'text-danger text-bold': 1 == $ctrl.wCount}" class="text-light"
-                        ng-click="$ctrl.makeWCount(1)">1</a></th>
-                    <th><a href="#" ng-class="{'text-danger text-bold': 2 == $ctrl.wCount}" class="text-light"
-                        ng-click="$ctrl.makeWCount(2)">2</a></th>
-                    <th><a href="#" ng-class="{'text-danger text-bold': 3 == $ctrl.wCount}" class="text-light"
-                        ng-click="$ctrl.makeWCount(3)">3</a></th>
-                    <th><a href="#" ng-class="{'text-danger text-bold': 4 == $ctrl.wCount}" class="text-light"
-                        ng-click="$ctrl.makeWCount(4)">4</a></th>
-                    <th><a href="#" ng-class="{'text-danger text-bold': 5 == $ctrl.wCount}" class="text-light"
-                        ng-click="$ctrl.makeWCount(5)">5</a></th>
-                    <th><a href="#" ng-class="{'text-danger text-bold': 6 == $ctrl.wCount}" class="text-light"
-                        ng-click="$ctrl.makeWCount(6)">6</a></th>
-                    <th><a href="#" ng-class="{'text-danger text-bold': 7 == $ctrl.wCount}" class="text-light"
-                        ng-click="$ctrl.makeWCount(7)">7</a></th>
-                    <th><a href="#" ng-class="{'text-danger text-bold': 8 == $ctrl.wCount}" class="text-light"
-                        ng-click="$ctrl.makeWCount(8)">8</a></th>
-                    <th><a href="#" ng-class="{'text-danger text-bold': 9 == $ctrl.wCount}" class="text-light"
-                        ng-click="$ctrl.makeWCount(9)">9</a></th>
-                    <th><a href="#" ng-class="{'text-danger text-bold': 10 == $ctrl.wCount}" class="text-light"
-                        ng-click="$ctrl.makeWCount(10)">10</a></th>
-                    <th><a href="#" ng-class="{'text-danger text-bold': 11 == $ctrl.wCount}" class="text-light"
-                        ng-click="$ctrl.makeWCount(11)">11+</a></th>
+                    <th ng-click="$ctrl.makeWCount(1)" class="btn-primary text-light"
+                      ng-class="{'btn-danger text-bold': 1 == $ctrl.wCount}"><a href="#" class="text-light">1</a></th>
+                    <th ng-click="$ctrl.makeWCount(2)" class="btn-primary text-light"
+                      ng-class="{'btn-danger text-bold': 2 == $ctrl.wCount}"><a href="#" class="text-light">2</a></th>
+                    <th ng-click="$ctrl.makeWCount(3)" class="btn-primary text-light"
+                      ng-class="{'btn-danger text-bold': 3 == $ctrl.wCount}"><a href="#" class="text-light">3</a></th>
+                    <th ng-click="$ctrl.makeWCount(4)" class="btn-primary text-light"
+                      ng-class="{'btn-danger text-bold': 4 == $ctrl.wCount}"><a href="#" class="text-light">4</a></th>
+                    <th ng-click="$ctrl.makeWCount(5)" class="btn-primary text-light"
+                      ng-class="{'btn-danger text-bold': 5 == $ctrl.wCount}"><a href="#" class="text-light">5</a></th>
+                    <th ng-click="$ctrl.makeWCount(6)" class="btn-primary text-light"
+                      ng-class="{'btn-danger text-bold': 6 == $ctrl.wCount}"><a href="#" class="text-light">6</a></th>
+                    <th ng-click="$ctrl.makeWCount(7)" class="btn-primary text-light"
+                      ng-class="{'btn-danger text-bold': 7 == $ctrl.wCount}"><a href="#" class="text-light">7</a></th>
+                    <th ng-click="$ctrl.makeWCount(8)" class="btn-primary text-light"
+                      ng-class="{'btn-danger text-bold': 8 == $ctrl.wCount}"><a href="#" class="text-light">8</a></th>
+                    <th ng-click="$ctrl.makeWCount(9)" class="btn-primary text-light"
+                      ng-class="{'btn-danger text-bold': 9 == $ctrl.wCount}"><a href="#" class="text-light">9</a></th>
+                    <th ng-click="$ctrl.makeWCount(10)" class="btn-primary text-light"
+                      ng-class="{'btn-danger text-bold': 10 == $ctrl.wCount}"><a href="#" class="text-light">10</a></th>
+                    <th ng-click="$ctrl.makeWCount(11)" class="btn-primary text-light"
+                      ng-class="{'btn-danger text-bold': 11 == $ctrl.wCount}"><a href="#" class="text-light">11+</a>
+                    </th>
                     <th>Body Parts</th>
                     <th>#</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr ng-repeat="toWoundLine in $ctrl.toWound">
-                    <td class="table-primary text-light"><a href="#" ng-click="$ctrl.makeWRoll(20-$index)"
-                        class="text-light"
-                        ng-class="{'text-danger text-bold': 20-$ctrl.wRoll == $index}">{{20-$index}}</a></td>
-                    <td ng-repeat="toWnd in $ctrl.toWound[$index] track by $index"
-                      ng-class="{'table-warning': toWnd>7, 'table-danger': toWnd>12, 'text-danger text-bold': 20-$ctrl.wRoll == $parent.$index && $index == $ctrl.wCount-1}">
-                      {{toWnd}}</td>
-                    <td><a href="#" ng-click="$ctrl.makeWBodyPart(20-$index)"
-                        ng-class="{'text-danger text-bold': 20-$ctrl.wBodyPart == $index}">{{$ctrl.toWoundPlace[$index]}}</a>
+                    <td ng-click="$ctrl.makeWRoll(20-$index)" class="btn-primary text-light"
+                      ng-class="{'btn-danger text-bold': 20-$ctrl.wRoll == $index}">
+                      <a href="#" class="text-light">{{20-$index}}</a>
                     </td>
-                    <td class="table-primary text-light"><a href="#" ng-click="$ctrl.makeWBodyPart(20-$index)"
-                        class="text-light"
-                        ng-class="{'text-danger text-bold': 20-$ctrl.wBodyPart == $index}">{{20-$index}}</a></td>
+                    <td ng-repeat="toWnd in $ctrl.toWound[$index] track by $index"
+                      ng-class="{'table-warning': toWnd>7, 'table-danger': toWnd>12, 'btn-danger text-bold': 20-$ctrl.wRoll == $parent.$index && $index == $ctrl.wCount-1}">
+                      {{toWnd}}</td>
+                    <td ng-click="$ctrl.makeWBodyPart(20-$index)"
+                      ng-class="{'btn-danger text-bold': 20-$ctrl.wBodyPart == $index}"><a
+                        ng-class="{'text-light': 20-$ctrl.wBodyPart == $index}"
+                        href="#">{{$ctrl.toWoundPlace[$index]}}</a>
+                    </td>
+                    <td ng-click="$ctrl.makeWBodyPart(20-$index)" class="btn-primary text-light"
+                      ng-class="{'btn-danger text-bold': 20-$ctrl.wBodyPart == $index}"><a href="#"
+                        class="text-light">{{20-$index}}</a></td>
                   </tr>
                 </tbody>
               </table>
