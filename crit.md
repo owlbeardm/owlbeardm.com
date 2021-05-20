@@ -33,3 +33,7 @@ Your opponent must make a hard (+2 to DC) Fortitude save or be slowed 2 for 1d4 
 ### Cutting Damage to Body #9
 
 With a faint odour of ammonia, urine spills from the wound and onto your blade. They become sickened 4 for the rest of the battle. Fortunately, urine is more or less sterile, meaning they will only have to make a challenging (+1 to DC) Fortitude save to avoid contracting a lethal infection and die in 1d6 days (becoming delirious and helpless within one day). If they survives they must make a challenging (+1 to DC) Fortitude save or be prone to leakage and constantly reek of urine.
+
+### Cutting Damage to Body #12
+
+Your weapon opens your opponent’s abdomen, spilling their entrails about their feet. They'll suffer a cumulative sickened 2 and drained 2 conditions each turn until they pass hard (+2 to DC) Fortitude save or die in 1d6 turns. Until that time your opponent can do nothing except futilely try to stuff the spilt entrails back into their ruined abdomen and counted as stunned. Anyone surviving such a horrifying experience must pass basic Will save or become frightened 1.
