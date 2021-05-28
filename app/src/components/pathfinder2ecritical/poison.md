@@ -1,0 +1,17 @@
+# Poison
+
+1. Affected by poison, your opponent hear a ringing noise that reduce their next attack by a penalty of -2.
+2. Your opponent feel sharp pain near their ribs. They suffer -2 to their attack rolls until the end of their next turn.
+3. A sharp pain paralyzes their leg for a second, knocking them to the ground but otherwise leaving them unharmed.
+4. Your opponent feel paralyzing pain in their chest, that drives their breath from their body. They become sickened 1.
+5. Poison cause your target intense pain every time they move, making them suffer a -2 penalty to their attack rolls until their wounded condition removed.
+6. Poison works near a vertebra in the spine, causing temporary paralysis. Your target falls to the ground, unable to use their legs for 1d6 turns, before recovering completely.
+7. Poison makes slowed 2 your opponent until the end of their next turn. They'll also become sickened 4, for the rest of the battle.
+8. Poison gets into the leg of the target. Your target is stunned until the end of their next turn. Their movement reduced by 10 feet, and they are flat-footed. In addition, papalizing leg will cause a cumulative sickened 1 condition each turn. They'll fall unconscious in 2d4 turns. Both conditions end when their wounded condition removed.
+9. Poison temporarily causing paralysis of your opponent's breathing musculature and cardiac arrhythmia as their hearts starts beating irregularly. They are slowed 2 until the end of their next turn and will then have to pass a Fortitude save or their heart will simply stop for a while, stunning them for the rest of the battle. If they pass the Fortitude save they will simply be slowed 2 for 1d4 turns before recovering their breath and normal heartbeat.
+10. Poison causes a spasm in the airway. Your opponent gasps for breath, becoming cumulative sickened 2 each turn until they make a challenging (+1 to DC) Fortitude save to immediately get rid of sickened condition, rolling at the start of each turn. If 2d4 turns pass without success they fall stunned from lack of air. If not making their roll within another constitution modifier turns, they die from lack of air.
+11. Poison works inside the target dropping them to the ground, stunned with pain for 1d4 turns. The legs are useless until they take long-term rest.
+12. Poison works inside the target dropping them to the ground, clasping their legs agonizing, counting as stunned for 1d6 turns, then become sickened 4 for the duration of the battle due to the agonizing pain. Such an injury requires expert healing within 1d6 days, or it will develop gangrene and need amputation of both legs.
+13. Poison works inside your opponent's spine. They fall stunned and will die within 1d4 hours from loss of air due to damage to the breathing center in the upper part of the spinal cord. Master Medicine check can save their life but will be hard (+2 to DC) and will still leave them paralyzed from the neck down and gains insanity due to the horrible experience of being paralyzed and helpless while slowly suffocating to death.
+14. Poison slowly papalize the target starting from face, making them a gruesome sight, proceeding with the spinal cord. Your target drops to the ground, gurgles and slowly calms for 1d4 turns before expiring.
+15. Your target coughs with blood, before their eyes start bleeding too. They collapse and die in a small pool of their blood.
