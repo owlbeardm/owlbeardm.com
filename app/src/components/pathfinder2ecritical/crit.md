@@ -2,10 +2,10 @@
 
 ## Conditions
 
-Senses: Blinded, Dazzled, Deafened
 Str: Enfeebled, Fatigued
 Dex: Clumsy, Fatigued
 Cons: Drained, Fatigued
+Senses: Blinded, Dazzled, Deafened
 Mental: Stupefied, Confused
 
 Frightened

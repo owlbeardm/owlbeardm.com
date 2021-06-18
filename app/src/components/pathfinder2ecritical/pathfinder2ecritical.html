@@ -12,6 +12,41 @@
       <div class="card-body">
         <div class="row">
           <div class="col-auto">
+            <p>Creatures cannot be reduced to fewer than 0 Hit Points. When most creatures reach 0 Hit Points, they die
+              and are
+              removed from play unless the attack was nonlethal, in which case they are instead knocked out for a
+              significant
+              amount of time (usually 1 minute or more). When undead and construct creatures reach 0 Hit Points, they
+              are
+              destroyed.</p>
+            <p>Player characters, their companions, and other significant characters and creatures don’t automatically
+              die when
+              they reach 0 Hit Points. Instead, they receive minor or major traumas (including death) by rolling on
+              Wounds Effect
+              Table. At the GM’s discretion, villains, powerful monsters, special NPCs, and enemies with special
+              abilities that
+              are likely to bring them back to the fight can use these rules as well.</p>
+            <div>Your wounded condition increase by 1 when:
+              <ol>
+                <li>somebody&#39;s attack score a critical hit against you, or you critically fail against an effect
+                  that
+                  would
+                  inflict damage.</li>
+                <li>damage would reduce you to zero hit points, or you are already at zero hit points and receive
+                  damage.
+                </li>
+              </ol>
+            </div>
+            <div>You roll on the Wounds Effect Table if:
+              <ol>
+                <li>your hit points drops to zero, or you take damage when your hit points is already at zero.</li>
+                <li>you are wounded by a critical attack with critical specialization effects.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-auto">
             <div class="table-responsive">
               <table class="table table-bordered table-sm">
                 <thead class="table-primary text-light">
@@ -61,7 +96,8 @@
                     </td>
                     <td ng-if="!$ctrl.criticals[$ctrl.weapon].NoBodyPart" ng-click="$ctrl.makeWBodyPart(20-$index)"
                       class="btn-primary text-light" ng-class="{'btn-danger text-bold': 20-$ctrl.wBodyPart == $index}">
-                      <a href="#" class="text-light">{{20-$index}}</a></td>
+                      <a href="#" class="text-light">{{20-$index}}</a>
+                    </td>
                   </tr>
                 </tbody>
               </table>
