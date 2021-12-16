@@ -2,12 +2,8 @@
 
 git tag -a v$1 -m "release version $1"
 git push origin --tags
-yarn build
-git checkout gh-pages
-git pull
-rm *.js
-cp -a dist/. .
-git add -A
-git commit -am "release $1"
-git push
-git checkout master
+
+export GIT_USER=c7d5a6
+export USE_SSH=true
+
+yarn deploy

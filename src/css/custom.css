@@ -1,0 +1,79 @@
+@import "styles.1.0.2.ef0599e0b4ae2fdc662b.css";
+
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: rgb(33, 175, 144);
+  --ifm-color-primary-darker: rgb(31, 165, 136);
+  --ifm-color-primary-darkest: rgb(26, 136, 112);
+  --ifm-color-primary-light: rgb(70, 203, 174);
+  --ifm-color-primary-lighter: rgb(102, 212, 189);
+  --ifm-color-primary-lightest: rgb(146, 224, 208);
+  --ifm-code-font-size: 95%;
+  --ifm-color-primary: #ca945c;
+  --ifm-color-primary-dark: #a46e35;
+  --ifm-color-primary-darker: #6c1417;
+  --ifm-color-primary-darkest: #591113;
+  --ifm-color-primary-light: #8c1a1e;
+  --ifm-color-primary-lighter: #921c1f;
+  --ifm-color-primary-lightest: #a51f23;
+}
+
+.navbar{
+  background-color: #463e43!important;
+  box-shadow: none;
+}
+
+aside {
+  border-right: none!important;
+}
+
+.navbar__logo {
+  width: 72px;
+  height: 72px;
+}
+
+.navbar__inner {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.navbar__title{
+  font-size: 2.25rem;
+  line-height: normal;
+}
+
+.footer {
+  background-color: #463e43!important;
+  color: #a3917a;
+}
+
+.footer__link-item {
+  color: #ca945c!important;
+}
+
+.footer__link-item:hover {
+  color: #c48749!important;
+}
+
+.card { 
+  overflow: initial;
+}
+
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+.table-of-contents__left-border {
+  border-left: none;
+}
