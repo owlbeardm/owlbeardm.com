@@ -2,21 +2,21 @@
 
 const fs = require("fs");
 const crits = require('./pathfinder2ecritical.json');
-const resultPath = "./crits.md";
+const resultPath = "./crits_table.csv";
 
 async function parseCrits() {
   fs.writeFileSync(resultPath, "# Crits\n\n", "utf8");
   const weaponsKeys = Object.keys(crits).filter((key) => crits[key]["Head"]);
   const sourceKeys = ["Head", "Body", "Arms", "Legs"];
   sourceKeys.forEach((skey) => {    
-    fs.appendFileSync(resultPath, `## ${skey}\n\n`, "utf8");
-    fs.appendFileSync(resultPath, `| ${weaponsKeys.join(` | `)} |\n`, "utf8");
-    fs.appendFileSync(resultPath, `| ${weaponsKeys.map(()=>"---").join(" | ")} |\n`, "utf8");
-    for(let i=0; i<15;i++){
-      const ind = i+1;
-      fs.appendFileSync(resultPath, `| **${ind}**: ${weaponsKeys.map((wk)=>crits[wk][skey][i]).join(` | **${ind}**: `)} |\n`, "utf8");
-    };
+    weaponsKeys.forEach((wkey) => {   
+      fs.appendFileSync(resultPath, `${wkey} - ${skey}\n`, "utf8");
+      for(let i=0; i<15;i++){
+        const ind = i+1;
+        fs.appendFileSync(resultPath, `<b>${ind}</b>: ${crits[wkey][skey][i]}${ind!=15?'|':''}`, "utf8");
+      };
     fs.appendFileSync(resultPath, `\n`, "utf8");
+    });
   });
 }
 parseCrits();
