@@ -8,12 +8,13 @@ async function parseCrits() {
   fs.writeFileSync(resultPath, "# Crits\n\n", "utf8");
   const weaponsKeys = Object.keys(crits).filter((key) => crits[key]["Head"]);
   const sourceKeys = ["Head", "Body", "Arms", "Legs"];
-  sourceKeys.forEach((skey) => {
+  sourceKeys.forEach((skey) => {    
     fs.appendFileSync(resultPath, `## ${skey}\n\n`, "utf8");
-    fs.appendFileSync(resultPath, `| ${weaponsKeys.join(" | ")} |\n`, "utf8");
+    fs.appendFileSync(resultPath, `| ${weaponsKeys.join(` | `)} |\n`, "utf8");
     fs.appendFileSync(resultPath, `| ${weaponsKeys.map(()=>"---").join(" | ")} |\n`, "utf8");
     for(let i=0; i<15;i++){
-      fs.appendFileSync(resultPath, `| ${weaponsKeys.map((wk)=>crits[wk][skey][i]).join(" | ")} |\n`, "utf8");
+      const ind = i+1;
+      fs.appendFileSync(resultPath, `| **${ind}**: ${weaponsKeys.map((wk)=>crits[wk][skey][i]).join(` | **${ind}**: `)} |\n`, "utf8");
     };
     fs.appendFileSync(resultPath, `\n`, "utf8");
   });
