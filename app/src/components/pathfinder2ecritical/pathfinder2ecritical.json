@@ -669,5 +669,25 @@
       "(TODO:)Your target coughs with blood, before their eyes start bleeding too. They collapse and die in a small pool of their blood."
     ],
     "NoBodyPart": true
+  },
+  "Bleed": {
+    "Wounds": [
+      "(TODO:)",
+      "(TODO:)",
+      "(TODO:)",
+      "(TODO:)",
+      "(TODO:)",
+      "(TODO:)",
+      "(TODO:)",
+      "(TODO:)",
+      "(TODO:)",
+      "(TODO:)",
+      "(TODO:)",
+      "(TODO:)",
+      "(TODO:)",
+      "(TODO:)",
+      "(TODO:)"
+    ],
+    "NoBodyPart": true
   }
 }
