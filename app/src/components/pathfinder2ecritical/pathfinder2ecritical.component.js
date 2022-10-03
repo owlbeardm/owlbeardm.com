@@ -100,6 +100,7 @@ function Pathfinder2eCriticalController($log) {
       ctrl.wResult = ctrl.toWound[20 - ctrl.wRoll][ctrl.wCount - 1];
     }
   };
+  
   ctrl.rangom = function () {
     const rand1 = Math.random();
     const rand2 = Math.random();

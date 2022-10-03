@@ -1,6 +1,8 @@
+#!/usr/bin/node
+
 const fs = require("fs");
 const crits = require('./pathfinder2ecritical.json');
-const resultPath = "app/src/components/pathfinder2ecritical/crits.md";
+const resultPath = "./crits.md";
 
 async function parseCrits() {
   fs.writeFileSync(resultPath, "# Crits\n\n", "utf8");
