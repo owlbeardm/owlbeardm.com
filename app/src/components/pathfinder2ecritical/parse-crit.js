@@ -6,7 +6,7 @@ const resultPath = "./crits.md";
 
 async function parseCrits() {
   fs.writeFileSync(resultPath, "# Crits\n\n", "utf8");
-  const weaponsKeys = Object.keys(crits).filter((key) => crits[key]["Head"]);
+  const weaponsKeys = Object.keys(crits).filter((key) => crits[key]["Head"] && key!="Bleed");
   const sourceKeys = ["Head", "Body", "Arms", "Legs"];
   sourceKeys.forEach((skey) => {    
     fs.appendFileSync(resultPath, `## ${skey}\n\n`, "utf8");
