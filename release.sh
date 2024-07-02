@@ -2,7 +2,7 @@
 
 git tag -a v$1 -m "release version $1"
 git push origin --tags
-yarn build
+npm run build
 git checkout gh-pages
 git pull
 rm *.js
