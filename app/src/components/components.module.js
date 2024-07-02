@@ -21,3 +21,7 @@ appComponents.component('wfrpcritical', WfrpcriticalComponent);
 import Pathfinder2eCriticalComponent from './pathfinder2ecritical/pathfinder2ecritical.component.js';
 
 appComponents.component('pathfinder2ecritical', Pathfinder2eCriticalComponent);
+
+import WWNCriticalComponent from './wwncritical/wwncritical.component.js';
+
+appComponents.component('wwncritical', WWNCriticalComponent);

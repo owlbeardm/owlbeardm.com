@@ -1,0 +1,283 @@
+<div class="row">
+  <div class="col-xl-8 col-centered">
+    <div class="card">
+      <div class="card-header card-header-primary">
+        <h4 class="card-title">Pathfinder 2E critical hits</h4>
+        <p class="card-category">Based on WARHAMMER FANTASY RPG Critical Hits Rolls by Josef Tham, v2.0 from
+          <a href="http://www.windsofchaos.com/">
+            www.windsofchaos.com
+          </a>
+        </p>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-auto">
+            <p>Creatures cannot be reduced to fewer than 0 Hit Points. When most creatures reach 0 Hit Points, they die
+              and are
+              removed from play unless the attack was nonlethal, in which case they are instead knocked out for a
+              significant
+              amount of time (usually 1 minute or more). When undead and construct creatures reach 0 Hit Points, they
+              are
+              destroyed.</p>
+            <p>Player characters, their companions, and other significant characters and creatures don’t automatically
+              die when
+              they reach 0 Hit Points. Instead, they receive minor or major traumas (including death) by rolling on
+              Wounds Effect
+              Table. At the GM’s discretion, villains, powerful monsters, special NPCs, and enemies with special
+              abilities that
+              are likely to bring them back to the fight can use these rules as well.</p>
+            <div>Your wounded condition increase by 1 when:
+              <ol>
+                <li>somebody&#39;s attack score a critical hit against you, or you critically fail against an effect
+                  that
+                  would
+                  inflict damage.</li>
+                <li>damage would reduce you to zero hit points, or you are already at zero hit points and receive
+                  damage.
+                </li>
+              </ol>
+            </div>
+            <div>You roll on the Wounds Effect Table if:
+              <ol>
+                <li>your hit points drops to zero, or you take damage when your hit points is already at zero.</li>
+                <li>you are wounded by a critical attack with critical specialization effects.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-auto">
+            <div class="table-responsive">
+              <table class="table table-bordered table-sm">
+                <thead class="table-primary text-light">
+                  <tr>
+                    <th>#</th>
+                    <th ng-click="$ctrl.makeWCount(1)" class="btn-primary text-light"
+                      ng-class="{'btn-danger text-bold': 1 == $ctrl.wCount}"><a href="#" class="text-light">1</a></th>
+                    <th ng-click="$ctrl.makeWCount(2)" class="btn-primary text-light"
+                      ng-class="{'btn-danger text-bold': 2 == $ctrl.wCount}"><a href="#" class="text-light">2</a></th>
+                    <th ng-click="$ctrl.makeWCount(3)" class="btn-primary text-light"
+                      ng-class="{'btn-danger text-bold': 3 == $ctrl.wCount}"><a href="#" class="text-light">3</a></th>
+                    <th ng-click="$ctrl.makeWCount(4)" class="btn-primary text-light"
+                      ng-class="{'btn-danger text-bold': 4 == $ctrl.wCount}"><a href="#" class="text-light">4</a></th>
+                    <th ng-click="$ctrl.makeWCount(5)" class="btn-primary text-light"
+                      ng-class="{'btn-danger text-bold': 5 == $ctrl.wCount}"><a href="#" class="text-light">5</a></th>
+                    <th ng-click="$ctrl.makeWCount(6)" class="btn-primary text-light"
+                      ng-class="{'btn-danger text-bold': 6 == $ctrl.wCount}"><a href="#" class="text-light">6</a></th>
+                    <th ng-click="$ctrl.makeWCount(7)" class="btn-primary text-light"
+                      ng-class="{'btn-danger text-bold': 7 == $ctrl.wCount}"><a href="#" class="text-light">7</a></th>
+                    <th ng-click="$ctrl.makeWCount(8)" class="btn-primary text-light"
+                      ng-class="{'btn-danger text-bold': 8 == $ctrl.wCount}"><a href="#" class="text-light">8</a></th>
+                    <th ng-click="$ctrl.makeWCount(9)" class="btn-primary text-light"
+                      ng-class="{'btn-danger text-bold': 9 == $ctrl.wCount}"><a href="#" class="text-light">9</a></th>
+                    <th ng-click="$ctrl.makeWCount(10)" class="btn-primary text-light"
+                      ng-class="{'btn-danger text-bold': 10 == $ctrl.wCount}"><a href="#" class="text-light">10</a></th>
+                    <th ng-click="$ctrl.makeWCount(11)" class="btn-primary text-light"
+                      ng-class="{'btn-danger text-bold': 11 == $ctrl.wCount}"><a href="#" class="text-light">11+</a>
+                    </th>
+                    <th ng-if="!$ctrl.criticals[$ctrl.weapon].NoBodyPart">Body Parts</th>
+                    <th ng-if="!$ctrl.criticals[$ctrl.weapon].NoBodyPart">#</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="toWoundLine in $ctrl.toWound">
+                    <td ng-click="$ctrl.makeWRoll(20-$index)" class="btn-primary text-light"
+                      ng-class="{'btn-danger text-bold': 20-$ctrl.wRoll == $index}">
+                      <a href="#" class="text-light">{{20-$index}}</a>
+                    </td>
+                    <td ng-click="$ctrl.makeWRoll(20-$parent.$index);$ctrl.makeWCount($index+1)"
+                      ng-repeat="toWnd in $ctrl.toWound[$index] track by $index"
+                      ng-class="{'table-warning': toWnd>7, 'table-danger': toWnd>12, 'btn-danger text-bold': 20-$ctrl.wRoll == $parent.$index && $index == $ctrl.wCount-1}">
+                      {{toWnd}}</td>
+                    <td ng-if="!$ctrl.criticals[$ctrl.weapon].NoBodyPart" ng-click="$ctrl.makeWBodyPart(20-$index)"
+                      ng-class="{'btn-danger text-bold': 20-$ctrl.wBodyPart == $index}"><a
+                        ng-class="{'text-light': 20-$ctrl.wBodyPart == $index}"
+                        href="#">{{$ctrl.toWoundPlace[$index]}}</a>
+                    </td>
+                    <td ng-if="!$ctrl.criticals[$ctrl.weapon].NoBodyPart" ng-click="$ctrl.makeWBodyPart(20-$index)"
+                      class="btn-primary text-light" ng-class="{'btn-danger text-bold': 20-$ctrl.wBodyPart == $index}">
+                      <a href="#" class="text-light">{{20-$index}}</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-auto">
+            <div class="alert alert-warning" role="alert" ng-if="!$ctrl.weapon" style="width: 100%;">
+              Select damage type for wound!
+            </div>
+            <div class="form-group">
+              <div class="form-check form-check-radio">
+                <label class="form-check-label text-dark">
+                  <input class="form-check-input" type="radio" name="weapon" id="weapon2" ng-model="$ctrl.weapon"
+                    value="Blunt">
+                  Bludgeoning of Force Damage
+                  <span class="circle">
+                    <span class="check"></span>
+                  </span>
+                </label>
+              </div>
+              <div class="form-check form-check-radio">
+                <label class="form-check-label text-dark">
+                  <input class="form-check-input" type="radio" name="weapon" id="weapon7" ng-model="$ctrl.weapon"
+                    value="Piercing">
+                  Piercing Damage
+                  <span class="circle">
+                    <span class="check"></span>
+                  </span>
+                </label>
+              </div>
+              <div class="form-check form-check-radio">
+                <label class="form-check-label text-dark">
+                  <input class="form-check-input" type="radio" name="weapon" id="weapon5" ng-model="$ctrl.weapon"
+                    value="Cutting">
+                  Slashing Damage
+                  <span class="circle">
+                    <span class="check"></span>
+                  </span>
+                </label>
+              </div>
+              <div class="form-check form-check-radio">
+                <label class="form-check-label text-dark">
+                  <input class="form-check-input" type="radio" name="weapon" id="weapon6" ng-model="$ctrl.weapon"
+                    value="Flame">
+                  Energy Damage
+                  <span class="circle">
+                    <span class="check"></span>
+                  </span>
+                </label>
+              </div>
+              <div class="form-check form-check-radio">
+                <label class="form-check-label text-grey">
+                  <input class="form-check-input" type="radio" name="weapon" id="weapon9" ng-model="$ctrl.weapon"
+                    value="Bleed">
+                  Bleed Damage
+                  <span class="circle">
+                    <span class="check"></span>
+                  </span>
+                </label>
+              </div>
+              <div class="form-check form-check-radio">
+                <label class="form-check-label text-dark">
+                  <input class="form-check-input" type="radio" name="weapon" id="weapon9" ng-model="$ctrl.weapon"
+                    value="Poison">
+                  Poison Damage
+                  <span class="circle">
+                    <span class="check"></span>
+                  </span>
+                </label>
+              </div>
+              <div class="form-check form-check-radio">
+                <label class="form-check-label text-dark">
+                  <input class="form-check-input" type="radio" name="weapon" id="weapon9" ng-model="$ctrl.weapon"
+                    value="Mental">
+                  Mental Damage
+                  <span class="circle">
+                    <span class="check"></span>
+                  </span>
+                </label>
+              </div>
+              <div class="form-check form-check-radio">
+                <label class="form-check-label text-dark">
+                  <input class="form-check-input" type="radio" name="weapon" id="weapon1" ng-model="$ctrl.weapon"
+                    value="Arrow">
+                  Arrow & Bolt Damage (Piercing)
+                  <span class="circle">
+                    <span class="check"></span>
+                  </span>
+                </label>
+              </div>
+              <div class="form-check form-check-radio">
+                <label class="form-check-label text-dark">
+                  <input class="form-check-input" type="radio" name="weapon" id="weapon3" ng-model="$ctrl.weapon"
+                    value="Bullet">
+                  Bullet Damage (Piercing)
+                  <span class="circle">
+                    <span class="check"></span>
+                  </span>
+                </label>
+              </div>
+              <div class="form-check form-check-radio">
+                <label class="form-check-label text-dark">
+                  <input class="form-check-input" type="radio" name="weapon" id="weapon4" ng-model="$ctrl.weapon"
+                    value="Claws">
+                  Claws & Teeth Damage (Piercing or Slashing)
+                  <span class="circle">
+                    <span class="check"></span>
+                  </span>
+                </label>
+              </div>
+              <div class="form-check form-check-radio">
+                <label class="form-check-label text-dark">
+                  <input class="form-check-input" type="radio" name="weapon" id="weapon8" ng-model="$ctrl.weapon"
+                    value="Explosion">
+                  Explosion & Shrapnel Damage (or Sonic)
+                  <span class="circle">
+                    <span class="check"></span>
+                  </span>
+                </label>
+              </div>
+              <div class="form-check form-check-radio">
+                <label class="form-check-label text-dark">
+                  <input class="form-check-input" type="radio" name="weapon" id="weapon9" ng-model="$ctrl.weapon"
+                    value="Unarmed">
+                  Unarmed Combat Damage
+                  <span class="circle">
+                    <span class="check"></span>
+                  </span>
+                </label>
+              </div>
+              <button type="button" class="btn btn-info" ng-click="$ctrl.rangom()">Random</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row" ng-if="$ctrl.weapon && $ctrl.wResult && ($ctrl.criticals[$ctrl.weapon].NoBodyPart || $ctrl.place)">
+  <div class="col-xl-8 col-centered">
+    <div class="card">
+      <div class="card-header card-header-primary">
+        <h4 class="card-title">{{$ctrl.weapon}} damage {{!$ctrl.criticals[$ctrl.weapon].NoBodyPart?'to
+          '+$ctrl.toWoundPlace[20-$ctrl.wBodyPart]:''}} #{{$ctrl.wResult}}.</h4>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-auto">
+            <p class="critical"><span
+                class="text-bold">{{$ctrl.criticals[$ctrl.weapon][$ctrl.place][$ctrl.wResult-1]}}{{$ctrl.criticals[$ctrl.weapon]['Wounds'][$ctrl.wResult-1]}}</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row" ng-if="$ctrl.weapon">
+  <div class="col-xl-8 col-centered">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="alert alert-warning" role="alert"
+            ng-if="$ctrl.weapon && !$ctrl.criticals[$ctrl.weapon].NoBodyPart && !$ctrl.place" style="width: 100%;">
+            Select Body Part for wound!
+          </div>
+          <div class="col-auto">
+            <ol>
+              <li ng-repeat="critical in $ctrl.criticals[$ctrl.weapon][$ctrl.place]">
+                <span class="critical" ng-class="{'text-bold': $ctrl.wResult-1 == $index}">{{critical}}</span>
+              </li>
+              <li ng-repeat="critical in $ctrl.criticals[$ctrl.weapon]['Wounds']">
+                <span class="critical" ng-class="{'text-bold': $ctrl.wResult-1 == $index}">{{critical}}</span>
+              </li>
+              <ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

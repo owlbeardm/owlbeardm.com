@@ -45,6 +45,12 @@ initiativeApp.config([
         });
 
         $stateProvider.state({
+          name: 'wwncritical',
+          url: '/wwncritical',
+          component: 'wwncritical',
+        });
+
+        $stateProvider.state({
           name: 'pathfinder2ecritical',
           url: '/pathfinder2ecritical',
           component: 'pathfinder2ecritical',
